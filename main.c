@@ -80,9 +80,10 @@ int main(int argc, char **argv)
 	char ip[16];
 	char dev[16];
 
-	if(argc < 1)
+	if(argc < 2)
 	{
-		printf("Error; Enter the number of the network device\nExample getIp 1\n");
+		printf("Error: Enter the number of the network device\nExample getIp 1\n");
+		exit(1);
 	}
 
 	get_dev(atoi(argv[1]), dev);
